@@ -11,10 +11,15 @@ class Vampire {
   // Adds the vampire as an offspring of this vampire
   addOffspring(vampire) {
 
+    this.offspring.push(vampire);
+    vampire.creator = this;
+
   }
 
   // Returns the total number of vampires created by that vampire
   get numberOfOffspring() {
+
+    return this.offspring.length;
 
   }
 
